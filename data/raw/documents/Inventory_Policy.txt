@@ -1,0 +1,1 @@
+TechNova synthetic demo inventory policy. Each product has a reorder level. Warehouse staff flag stock at or below reorder level for replenishment. Inventory is reviewed weekly.

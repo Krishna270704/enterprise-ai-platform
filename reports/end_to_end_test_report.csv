@@ -1,0 +1,6 @@
+name,expected_route,actual_route,http_status,latency_seconds,verification_status,semantic_factual_verification,functional_pass,module_errors,pass
+document-only,documents,,500,0.1634,,not_performed,False,[],False
+sql-only,sql,sql,200,0.0847,insufficient_evidence,not_performed,False,"[{""module"": ""sql"", ""error"": ""SQL execution failed. Check server logs.""}]",False
+analytics-only,analytics,,500,0.1092,,not_performed,False,[],False
+hybrid,hybrid,,500,0.2213,,not_performed,False,[],False
+full-hybrid,full_hybrid,,500,0.2845,,not_performed,False,[],False

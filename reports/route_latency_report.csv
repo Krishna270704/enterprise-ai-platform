@@ -1,0 +1,6 @@
+route,query_name,latency_seconds,pass
+documents,document-only,1.0041,True
+sql,sql-only,2.1206,True
+analytics,analytics-only,9.5473,True
+hybrid,hybrid,12.233,True
+full_hybrid,full-hybrid,25.9462,True

@@ -1,0 +1,20 @@
+fastapi
+uvicorn[standard]
+python-dotenv
+pydantic
+psycopg2-binary
+pandas
+numpy
+scikit-learn
+chromadb
+sentence-transformers
+pypdf
+python-docx
+python-multipart
+groq
+httpx
+pytest
+- For customer counts, use COUNT(*) AS customer_count.
+- For employee counts, use COUNT(*) AS employee_count.
+- For product counts, use COUNT(*) AS product_count.
+- For delivered revenue, use SUM(s.revenue) AS total_delivered_revenue.

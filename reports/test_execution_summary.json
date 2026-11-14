@@ -1,0 +1,29 @@
+{
+  "measured_at": "2026-11-03T22:24:33.514608+00:00",
+  "baseline_pytest": "16 passed",
+  "api_end_to_end": {
+    "passed": 5,
+    "failed": 0
+  },
+  "retrieval": {
+    "precision_at_5": 0.2,
+    "recall_at_5": 1.0,
+    "mrr": 1.0
+  },
+  "sql_accuracy": 1.0,
+  "analytics_checks": {
+    "monthly_revenue_match": true,
+    "city_revenue_match": true,
+    "anomaly_output_match": true
+  },
+  "evidence_verification_functional_unit_tests_passed": 3,
+  "evidence_verification_functional_unit_tests_total": 3,
+  "semantic_factual_verification": "not_performed",
+  "integration_modules": [
+    "document ingestion/retrieval",
+    "PostgreSQL queries",
+    "analytics",
+    "evidence fusion",
+    "answer generation"
+  ]
+}

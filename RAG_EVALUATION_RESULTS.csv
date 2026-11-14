@@ -1,0 +1,11 @@
+query_id,question,expected_relevant_source,retrieved_sources,retrieved_document_count,precision_at_5,precision_over_returned,recall_at_5,reciprocal_rank,result,latency_seconds
+RAG-01,What is the return window?,Refund_Return_Policy.txt,Refund_Return_Policy.txt,1,0.2,1.0,1.0,1.0,PASS,9.2367
+RAG-02,When are refunds processed?,Refund_Return_Policy.txt,Refund_Return_Policy.txt|HR_Policy.txt,2,0.2,0.5,1.0,1.0,REVIEW_REQUIRED,1.1617
+RAG-03,What is the casual leave policy?,HR_Policy.txt,HR_Policy.txt|Refund_Return_Policy.txt|Inventory_Policy.txt,3,0.2,0.3333,1.0,1.0,REVIEW_REQUIRED,1.5459
+RAG-04,Where are HR requests submitted?,HR_Policy.txt,HR_Policy.txt,1,0.2,1.0,1.0,1.0,PASS,0.6614
+RAG-05,What happens at the inventory reorder level?,Inventory_Policy.txt,Inventory_Policy.txt,1,0.2,1.0,1.0,1.0,PASS,0.6298
+RAG-06,How often is inventory reviewed?,Inventory_Policy.txt,Inventory_Policy.txt,1,0.2,1.0,1.0,1.0,PASS,0.6596
+RAG-07,What products are in the catalogue?,Product_Catalogue.txt,Product_Catalogue.txt,1,0.2,1.0,1.0,1.0,PASS,0.898
+RAG-08,What is the NovaBook Pro price?,Product_Catalogue.txt,Product_Catalogue.txt|Financial_Report.txt,2,0.2,0.5,1.0,1.0,REVIEW_REQUIRED,1.2139
+RAG-09,How is revenue calculated?,Financial_Report.txt,Financial_Report.txt,1,0.2,1.0,1.0,1.0,PASS,1.5001
+RAG-10,Is the financial note an actual company statement?,Financial_Report.txt,Financial_Report.txt,1,0.2,1.0,1.0,1.0,PASS,0.9033

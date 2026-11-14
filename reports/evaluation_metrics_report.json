@@ -1,0 +1,587 @@
+{
+  "retrieval": {
+    "benchmark": "TechNova synthetic document retrieval",
+    "measured_at": "2026-11-03T22:26:09.536560+00:00",
+    "number_of_queries": 5,
+    "k": 5,
+    "mean_precision_at_5": 0.2,
+    "mean_recall_at_5": 1.0,
+    "mrr": 1.0,
+    "average_latency_seconds": 2.2058,
+    "cold_start_latency_seconds": 10.8427,
+    "warm_retrieval_latencies_seconds": [
+      0.0441,
+      0.0511,
+      0.0461,
+      0.045
+    ],
+    "average_warm_retrieval_latency_seconds": 0.0466,
+    "cases": [
+      {
+        "query": "What is the refund and return policy?",
+        "relevant": [
+          "Refund_Return_Policy.txt"
+        ],
+        "retrieved": [
+          {
+            "text": "TechNova synthetic demo return policy. Customers may request a return within 15 calendar days of delivery if unused and in original packaging. Refunds are processed after inspection, normally within 7 business days.",
+            "source": "Refund_Return_Policy.txt",
+            "chunk": 0,
+            "bm25_score": 1.0,
+            "semantic_score": 0.4708,
+            "score": 0.7354,
+            "rerank_score": 3.6009
+          },
+          {
+            "text": "TechNova synthetic demo inventory policy. Each product has a reorder level. Warehouse staff flag stock at or below reorder level for replenishment. Inventory is reviewed weekly.",
+            "source": "Inventory_Policy.txt",
+            "chunk": 0,
+            "bm25_score": 0.7684,
+            "semantic_score": 0.4096,
+            "score": 0.589,
+            "rerank_score": -7.088
+          },
+          {
+            "text": "TechNova synthetic demo HR policy. Casual leave requires manager approval. HR requests are submitted through the employee portal. Payroll is processed on the final working day of each month.",
+            "source": "HR_Policy.txt",
+            "chunk": 0,
+            "bm25_score": 0.9661,
+            "semantic_score": 0.3646,
+            "score": 0.6653,
+            "rerank_score": -10.645
+          },
+          {
+            "text": "TechNova synthetic catalogue: NovaBook Pro laptop INR 75000; NovaView 27 monitor INR 18000; Wireless Mouse accessory INR 1200; NovaBook Air laptop INR 62000; USB-C Dock accessory INR 4500; NovaView 24 monitor INR 12500.",
+            "source": "Product_Catalogue.txt",
+            "chunk": 0,
+            "bm25_score": 0.6073,
+            "semantic_score": 0.3433,
+            "score": 0.4753,
+            "rerank_score": -11.2795
+          },
+          {
+            "text": "TechNova synthetic demo financial note for 2026. Sales are generated for academic testing only, not actual company financial statements. Revenue equals product price multiplied by units sold.",
+            "source": "Financial_Report.txt",
+            "chunk": 0,
+            "bm25_score": 0.6073,
+            "semantic_score": 0.3552,
+            "score": 0.4813,
+            "rerank_score": -11.3807
+          }
+        ],
+        "retrieval_latency_seconds": 10.8427,
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0,
+        "reciprocal_rank": 1.0
+      },
+      {
+        "query": "What is the company employee leave policy?",
+        "relevant": [
+          "HR_Policy.txt"
+        ],
+        "retrieved": [
+          {
+            "text": "TechNova synthetic demo HR policy. Casual leave requires manager approval. HR requests are submitted through the employee portal. Payroll is processed on the final working day of each month.",
+            "source": "HR_Policy.txt",
+            "chunk": 0,
+            "bm25_score": 1.0,
+            "semantic_score": 0.4744,
+            "score": 0.7372,
+            "rerank_score": 1.4505
+          },
+          {
+            "text": "TechNova synthetic demo inventory policy. Each product has a reorder level. Warehouse staff flag stock at or below reorder level for replenishment. Inventory is reviewed weekly.",
+            "source": "Inventory_Policy.txt",
+            "chunk": 0,
+            "bm25_score": 0.6558,
+            "semantic_score": 0.3856,
+            "score": 0.5207,
+            "rerank_score": -9.1385
+          },
+          {
+            "text": "TechNova synthetic demo return policy. Customers may request a return within 15 calendar days of delivery if unused and in original packaging. Refunds are processed after inspection, normally within 7 business days.",
+            "source": "Refund_Return_Policy.txt",
+            "chunk": 0,
+            "bm25_score": 0.5827,
+            "semantic_score": 0.3564,
+            "score": 0.4696,
+            "rerank_score": -9.3942
+          },
+          {
+            "text": "TechNova synthetic catalogue: NovaBook Pro laptop INR 75000; NovaView 27 monitor INR 18000; Wireless Mouse accessory INR 1200; NovaBook Air laptop INR 62000; USB-C Dock accessory INR 4500; NovaView 24 monitor INR 12500.",
+            "source": "Product_Catalogue.txt",
+            "chunk": 0,
+            "bm25_score": 0.5406,
+            "semantic_score": 0.3303,
+            "score": 0.4354,
+            "rerank_score": -11.3759
+          },
+          {
+            "text": "TechNova synthetic demo financial note for 2026. Sales are generated for academic testing only, not actual company financial statements. Revenue equals product price multiplied by units sold.",
+            "source": "Financial_Report.txt",
+            "chunk": 0,
+            "bm25_score": 0.6455,
+            "semantic_score": 0.3387,
+            "score": 0.4921,
+            "rerank_score": -11.4196
+          }
+        ],
+        "retrieval_latency_seconds": 0.0441,
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0,
+        "reciprocal_rank": 1.0
+      },
+      {
+        "query": "What happens when inventory stock reaches reorder level?",
+        "relevant": [
+          "Inventory_Policy.txt"
+        ],
+        "retrieved": [
+          {
+            "text": "TechNova synthetic demo inventory policy. Each product has a reorder level. Warehouse staff flag stock at or below reorder level for replenishment. Inventory is reviewed weekly.",
+            "source": "Inventory_Policy.txt",
+            "chunk": 0,
+            "bm25_score": 1.0,
+            "semantic_score": 0.5236,
+            "score": 0.7618,
+            "rerank_score": 2.171
+          },
+          {
+            "text": "TechNova synthetic demo return policy. Customers may request a return within 15 calendar days of delivery if unused and in original packaging. Refunds are processed after inspection, normally within 7 business days.",
+            "source": "Refund_Return_Policy.txt",
+            "chunk": 0,
+            "bm25_score": 0.4302,
+            "semantic_score": 0.3954,
+            "score": 0.4128,
+            "rerank_score": -11.0753
+          },
+          {
+            "text": "TechNova synthetic catalogue: NovaBook Pro laptop INR 75000; NovaView 27 monitor INR 18000; Wireless Mouse accessory INR 1200; NovaBook Air laptop INR 62000; USB-C Dock accessory INR 4500; NovaView 24 monitor INR 12500.",
+            "source": "Product_Catalogue.txt",
+            "chunk": 0,
+            "bm25_score": 0.4302,
+            "semantic_score": 0.3568,
+            "score": 0.3935,
+            "rerank_score": -11.2978
+          },
+          {
+            "text": "TechNova synthetic demo financial note for 2026. Sales are generated for academic testing only, not actual company financial statements. Revenue equals product price multiplied by units sold.",
+            "source": "Financial_Report.txt",
+            "chunk": 0,
+            "bm25_score": 0.4302,
+            "semantic_score": 0.3643,
+            "score": 0.3973,
+            "rerank_score": -11.3999
+          },
+          {
+            "text": "Synthetic demo documents are generated by scripts/generate_demo_data.py.",
+            "source": "README.txt",
+            "chunk": 0,
+            "bm25_score": 0.4302,
+            "semantic_score": 0.0,
+            "score": 0.2151,
+            "rerank_score": -11.4083
+          }
+        ],
+        "retrieval_latency_seconds": 0.0511,
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0,
+        "reciprocal_rank": 1.0
+      },
+      {
+        "query": "What products are available in the product catalogue?",
+        "relevant": [
+          "Product_Catalogue.txt"
+        ],
+        "retrieved": [
+          {
+            "text": "TechNova synthetic catalogue: NovaBook Pro laptop INR 75000; NovaView 27 monitor INR 18000; Wireless Mouse accessory INR 1200; NovaBook Air laptop INR 62000; USB-C Dock accessory INR 4500; NovaView 24 monitor INR 12500.",
+            "source": "Product_Catalogue.txt",
+            "chunk": 0,
+            "bm25_score": 0.8615,
+            "semantic_score": 0.4933,
+            "score": 0.6774,
+            "rerank_score": -3.517
+          },
+          {
+            "text": "TechNova synthetic demo inventory policy. Each product has a reorder level. Warehouse staff flag stock at or below reorder level for replenishment. Inventory is reviewed weekly.",
+            "source": "Inventory_Policy.txt",
+            "chunk": 0,
+            "bm25_score": 0.8194,
+            "semantic_score": 0.3823,
+            "score": 0.6008,
+            "rerank_score": -8.5644
+          },
+          {
+            "text": "TechNova synthetic demo financial note for 2026. Sales are generated for academic testing only, not actual company financial statements. Revenue equals product price multiplied by units sold.",
+            "source": "Financial_Report.txt",
+            "chunk": 0,
+            "bm25_score": 0.8682,
+            "semantic_score": 0.3905,
+            "score": 0.6293,
+            "rerank_score": -9.7765
+          },
+          {
+            "text": "TechNova synthetic demo return policy. Customers may request a return within 15 calendar days of delivery if unused and in original packaging. Refunds are processed after inspection, normally within 7 business days.",
+            "source": "Refund_Return_Policy.txt",
+            "chunk": 0,
+            "bm25_score": 0.9133,
+            "semantic_score": 0.3391,
+            "score": 0.6262,
+            "rerank_score": -11.0351
+          },
+          {
+            "text": "Synthetic demo documents are generated by scripts/generate_demo_data.py.",
+            "source": "README.txt",
+            "chunk": 0,
+            "bm25_score": 0.7768,
+            "semantic_score": 0.3603,
+            "score": 0.5685,
+            "rerank_score": -11.2242
+          }
+        ],
+        "retrieval_latency_seconds": 0.0461,
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0,
+        "reciprocal_rank": 1.0
+      },
+      {
+        "query": "What are the company's financial performance details?",
+        "relevant": [
+          "Financial_Report.txt"
+        ],
+        "retrieved": [
+          {
+            "text": "TechNova synthetic demo financial note for 2026. Sales are generated for academic testing only, not actual company financial statements. Revenue equals product price multiplied by units sold.",
+            "source": "Financial_Report.txt",
+            "chunk": 0,
+            "bm25_score": 1.0,
+            "semantic_score": 0.4197,
+            "score": 0.7099,
+            "rerank_score": -8.2631
+          },
+          {
+            "text": "TechNova synthetic catalogue: NovaBook Pro laptop INR 75000; NovaView 27 monitor INR 18000; Wireless Mouse accessory INR 1200; NovaBook Air laptop INR 62000; USB-C Dock accessory INR 4500; NovaView 24 monitor INR 12500.",
+            "source": "Product_Catalogue.txt",
+            "chunk": 0,
+            "bm25_score": 0.5506,
+            "semantic_score": 0.3652,
+            "score": 0.4579,
+            "rerank_score": -11.3302
+          },
+          {
+            "text": "TechNova synthetic demo inventory policy. Each product has a reorder level. Warehouse staff flag stock at or below reorder level for replenishment. Inventory is reviewed weekly.",
+            "source": "Inventory_Policy.txt",
+            "chunk": 0,
+            "bm25_score": 0.5506,
+            "semantic_score": 0.3534,
+            "score": 0.452,
+            "rerank_score": -11.3553
+          },
+          {
+            "text": "TechNova synthetic demo return policy. Customers may request a return within 15 calendar days of delivery if unused and in original packaging. Refunds are processed after inspection, normally within 7 business days.",
+            "source": "Refund_Return_Policy.txt",
+            "chunk": 0,
+            "bm25_score": 0.5944,
+            "semantic_score": 0.3508,
+            "score": 0.4726,
+            "rerank_score": -11.3616
+          },
+          {
+            "text": "TechNova synthetic demo HR policy. Casual leave requires manager approval. HR requests are submitted through the employee portal. Payroll is processed on the final working day of each month.",
+            "source": "HR_Policy.txt",
+            "chunk": 0,
+            "bm25_score": 0.8277,
+            "semantic_score": 0.3457,
+            "score": 0.5867,
+            "rerank_score": -11.3993
+          }
+        ],
+        "retrieval_latency_seconds": 0.045,
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0,
+        "reciprocal_rank": 1.0
+      }
+    ]
+  },
+  "text_to_sql": {
+    "controlled_cases": [
+      {
+        "question": "How many customers are there?",
+        "column": "customer_count",
+        "expected": 30,
+        "actual": null,
+        "latency_seconds": 0.1523,
+        "execution_status": "failure",
+        "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01kwcza4kjfw482djp8z3skds8` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199535, Requested 1082. Please try again in 4m26.543999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "pass": false
+      },
+      {
+        "question": "How many employees are there?",
+        "column": "employee_count",
+        "expected": 15,
+        "actual": null,
+        "latency_seconds": 0.0719,
+        "execution_status": "failure",
+        "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01kwcza4kjfw482djp8z3skds8` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199535, Requested 1082. Please try again in 4m26.543999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "pass": false
+      },
+      {
+        "question": "How many products are there?",
+        "column": "product_count",
+        "expected": 6,
+        "actual": null,
+        "latency_seconds": 0.0756,
+        "execution_status": "failure",
+        "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01kwcza4kjfw482djp8z3skds8` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199535, Requested 1135. Please try again in 4m49.44s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "pass": false
+      },
+      {
+        "question": "Calculate total revenue from delivered orders only",
+        "column": "total_delivered_revenue",
+        "expected": 5353600,
+        "actual": null,
+        "latency_seconds": 0.0895,
+        "execution_status": "failure",
+        "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01kwcza4kjfw482djp8z3skds8` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199535, Requested 1084. Please try again in 4m27.408s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "pass": false
+      }
+    ],
+    "accuracy": 0.0,
+    "sql_validation": [
+      {
+        "sql": "SELECT COUNT(*) FROM customers",
+        "expected_valid": true,
+        "actual_valid": true
+      },
+      {
+        "sql": "DELETE FROM customers",
+        "expected_valid": false,
+        "actual_valid": false
+      },
+      {
+        "sql": "SELECT * FROM unknown_table",
+        "expected_valid": false,
+        "actual_valid": false
+      },
+      {
+        "sql": "SELECT * FROM customers; DROP TABLE customers",
+        "expected_valid": false,
+        "actual_valid": false
+      }
+    ],
+    "sql_validation_failures": 0,
+    "sql_execution_failures": 4
+  },
+  "analytics": {
+    "monthly_revenue_match": true,
+    "all_monthly_figures_match": true,
+    "maximum_month_match": true,
+    "minimum_month_match": true,
+    "expected_maximum": {
+      "month": "2026-05",
+      "revenue": 1569800.0
+    },
+    "expected_minimum": {
+      "month": "2026-04",
+      "revenue": 546000.0
+    },
+    "city_revenue_match": true,
+    "anomaly_output_match": true,
+    "database_monthly_revenue": {
+      "2026-01": 1401500.0,
+      "2026-02": 731100.0,
+      "2026-03": 1055700.0,
+      "2026-04": 546000.0,
+      "2026-05": 1569800.0,
+      "2026-06": 1253400.0,
+      "2026-07": 918500.0,
+      "2026-08": 1281900.0,
+      "2026-09": 1186200.0,
+      "2026-10": 583200.0
+    },
+    "analytics_monthly_revenue": {
+      "2026-01": 1401500.0,
+      "2026-02": 731100.0,
+      "2026-03": 1055700.0,
+      "2026-04": 546000.0,
+      "2026-05": 1569800.0,
+      "2026-06": 1253400.0,
+      "2026-07": 918500.0,
+      "2026-08": 1281900.0,
+      "2026-09": 1186200.0,
+      "2026-10": 583200.0
+    },
+    "database_city_revenue": {
+      "Delhi": 3812500.0,
+      "Gurugram": 3421100.0,
+      "Jaipur": 3134100.0,
+      "Noida": 159600.0
+    },
+    "analytics_city_revenue": {
+      "Delhi": 3812500.0,
+      "Gurugram": 3421100.0,
+      "Jaipur": 3134100.0,
+      "Noida": 159600.0
+    },
+    "anomaly_threshold_description": "Absolute deviation greater than two sample standard deviations",
+    "anomaly_threshold_upper_bound": 275870.3546511999,
+    "analytics_result": {
+      "total_revenue": 10527300.0,
+      "monthly_trend": [
+        {
+          "revenue": 1401500.0,
+          "month": "2026-01"
+        },
+        {
+          "revenue": 731100.0,
+          "month": "2026-02"
+        },
+        {
+          "revenue": 1055700.0,
+          "month": "2026-03"
+        },
+        {
+          "revenue": 546000.0,
+          "month": "2026-04"
+        },
+        {
+          "revenue": 1569800.0,
+          "month": "2026-05"
+        },
+        {
+          "revenue": 1253400.0,
+          "month": "2026-06"
+        },
+        {
+          "revenue": 918500.0,
+          "month": "2026-07"
+        },
+        {
+          "revenue": 1281900.0,
+          "month": "2026-08"
+        },
+        {
+          "revenue": 1186200.0,
+          "month": "2026-09"
+        },
+        {
+          "revenue": 583200.0,
+          "month": "2026-10"
+        }
+      ],
+      "monthly_extrema": {
+        "maximum": {
+          "month": "2026-05",
+          "revenue": 1569800.0
+        },
+        "minimum": {
+          "month": "2026-04",
+          "revenue": 546000.0
+        }
+      },
+      "revenue_by_city": {
+        "Delhi": 3812500.0,
+        "Gurugram": 3421100.0,
+        "Jaipur": 3134100.0,
+        "Noida": 159600.0
+      },
+      "anomalies": [
+        {
+          "sale_date": "2026-01-22",
+          "city": "Gurugram",
+          "revenue": "300000.0"
+        },
+        {
+          "sale_date": "2026-05-31",
+          "city": "Delhi",
+          "revenue": "300000.0"
+        },
+        {
+          "sale_date": "2026-06-27",
+          "city": "Jaipur",
+          "revenue": "300000.0"
+        },
+        {
+          "sale_date": "2026-08-02",
+          "city": "Delhi",
+          "revenue": "300000.0"
+        },
+        {
+          "sale_date": "2026-08-17",
+          "city": "Jaipur",
+          "revenue": "300000.0"
+        },
+        {
+          "sale_date": "2026-09-27",
+          "city": "Delhi",
+          "revenue": "300000.0"
+        }
+      ],
+      "forecast": {
+        "status": "available",
+        "next_month": "2026-11",
+        "predicted_revenue": 977833.33,
+        "method": "Linear regression on monthly revenue",
+        "note": "Experimental estimate, not a validated business forecast."
+      },
+      "root_cause_indicators": {
+        "highest_revenue_city": "Delhi",
+        "lowest_revenue_city": "Noida",
+        "highest_revenue_product": "NovaBook Air",
+        "lowest_revenue_product": "Wireless Mouse",
+        "interpretation": "These are revenue-contribution indicators, not proof of causation."
+      },
+      "note": "Anomalies use a basic 2-standard-deviation heuristic. Forecasting uses a simple linear trend and requires further validation."
+    }
+  },
+  "evidence_verification": {
+    "cases": [
+      {
+        "name": "supported",
+        "expected_status": "supported",
+        "actual": {
+          "support_ratio": 1.0,
+          "status": "supported",
+          "method": "numeric claim matching against structured evidence; human review required"
+        },
+        "pass": true
+      },
+      {
+        "name": "unsupported",
+        "expected_status": "review_required",
+        "actual": {
+          "support_ratio": 0.0,
+          "status": "review_required",
+          "method": "numeric claim matching against structured evidence; human review required"
+        },
+        "pass": true
+      },
+      {
+        "name": "insufficient-evidence",
+        "expected_status": "insufficient_evidence",
+        "actual": {
+          "support_ratio": 0.0,
+          "status": "insufficient_evidence",
+          "method": "evidence availability check"
+        },
+        "pass": true
+      }
+    ],
+    "functional_unit_test_pass_count": 3,
+    "functional_unit_test_total": 3,
+    "semantic_factual_verification": "not_performed",
+    "limitations": [
+      "Numeric verification checks whether answer numbers occur anywhere in serialized evidence.",
+      "Document verification uses lexical overlap, not semantic entailment.",
+      "A supported number does not prove that the surrounding sentence is truthful.",
+      "Mixed document/database/analytics answers may be marked review_required for human review.",
+      "These cases test verifier behavior and are not semantic faithfulness or hallucination detection."
+    ]
+  },
+  "classification": {
+    "dataset": "Synthetic TechNova records and documents",
+    "forecasts": "Experimental linear trend forecast only",
+    "verification": "Functional verifier unit tests only; semantic faithfulness and hallucination detection were not performed"
+  }
+}

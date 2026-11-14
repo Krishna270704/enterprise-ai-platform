@@ -1,0 +1,305 @@
+{
+  "benchmark": "TechNova synthetic document retrieval",
+  "measured_at": "2026-11-03T22:26:09.536560+00:00",
+  "number_of_queries": 5,
+  "k": 5,
+  "mean_precision_at_5": 0.2,
+  "mean_recall_at_5": 1.0,
+  "mrr": 1.0,
+  "average_latency_seconds": 2.2058,
+  "cold_start_latency_seconds": 10.8427,
+  "warm_retrieval_latencies_seconds": [
+    0.0441,
+    0.0511,
+    0.0461,
+    0.045
+  ],
+  "average_warm_retrieval_latency_seconds": 0.0466,
+  "cases": [
+    {
+      "query": "What is the refund and return policy?",
+      "relevant": [
+        "Refund_Return_Policy.txt"
+      ],
+      "retrieved": [
+        {
+          "text": "TechNova synthetic demo return policy. Customers may request a return within 15 calendar days of delivery if unused and in original packaging. Refunds are processed after inspection, normally within 7 business days.",
+          "source": "Refund_Return_Policy.txt",
+          "chunk": 0,
+          "bm25_score": 1.0,
+          "semantic_score": 0.4708,
+          "score": 0.7354,
+          "rerank_score": 3.6009
+        },
+        {
+          "text": "TechNova synthetic demo inventory policy. Each product has a reorder level. Warehouse staff flag stock at or below reorder level for replenishment. Inventory is reviewed weekly.",
+          "source": "Inventory_Policy.txt",
+          "chunk": 0,
+          "bm25_score": 0.7684,
+          "semantic_score": 0.4096,
+          "score": 0.589,
+          "rerank_score": -7.088
+        },
+        {
+          "text": "TechNova synthetic demo HR policy. Casual leave requires manager approval. HR requests are submitted through the employee portal. Payroll is processed on the final working day of each month.",
+          "source": "HR_Policy.txt",
+          "chunk": 0,
+          "bm25_score": 0.9661,
+          "semantic_score": 0.3646,
+          "score": 0.6653,
+          "rerank_score": -10.645
+        },
+        {
+          "text": "TechNova synthetic catalogue: NovaBook Pro laptop INR 75000; NovaView 27 monitor INR 18000; Wireless Mouse accessory INR 1200; NovaBook Air laptop INR 62000; USB-C Dock accessory INR 4500; NovaView 24 monitor INR 12500.",
+          "source": "Product_Catalogue.txt",
+          "chunk": 0,
+          "bm25_score": 0.6073,
+          "semantic_score": 0.3433,
+          "score": 0.4753,
+          "rerank_score": -11.2795
+        },
+        {
+          "text": "TechNova synthetic demo financial note for 2026. Sales are generated for academic testing only, not actual company financial statements. Revenue equals product price multiplied by units sold.",
+          "source": "Financial_Report.txt",
+          "chunk": 0,
+          "bm25_score": 0.6073,
+          "semantic_score": 0.3552,
+          "score": 0.4813,
+          "rerank_score": -11.3807
+        }
+      ],
+      "retrieval_latency_seconds": 10.8427,
+      "precision_at_k": 0.2,
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "query": "What is the company employee leave policy?",
+      "relevant": [
+        "HR_Policy.txt"
+      ],
+      "retrieved": [
+        {
+          "text": "TechNova synthetic demo HR policy. Casual leave requires manager approval. HR requests are submitted through the employee portal. Payroll is processed on the final working day of each month.",
+          "source": "HR_Policy.txt",
+          "chunk": 0,
+          "bm25_score": 1.0,
+          "semantic_score": 0.4744,
+          "score": 0.7372,
+          "rerank_score": 1.4505
+        },
+        {
+          "text": "TechNova synthetic demo inventory policy. Each product has a reorder level. Warehouse staff flag stock at or below reorder level for replenishment. Inventory is reviewed weekly.",
+          "source": "Inventory_Policy.txt",
+          "chunk": 0,
+          "bm25_score": 0.6558,
+          "semantic_score": 0.3856,
+          "score": 0.5207,
+          "rerank_score": -9.1385
+        },
+        {
+          "text": "TechNova synthetic demo return policy. Customers may request a return within 15 calendar days of delivery if unused and in original packaging. Refunds are processed after inspection, normally within 7 business days.",
+          "source": "Refund_Return_Policy.txt",
+          "chunk": 0,
+          "bm25_score": 0.5827,
+          "semantic_score": 0.3564,
+          "score": 0.4696,
+          "rerank_score": -9.3942
+        },
+        {
+          "text": "TechNova synthetic catalogue: NovaBook Pro laptop INR 75000; NovaView 27 monitor INR 18000; Wireless Mouse accessory INR 1200; NovaBook Air laptop INR 62000; USB-C Dock accessory INR 4500; NovaView 24 monitor INR 12500.",
+          "source": "Product_Catalogue.txt",
+          "chunk": 0,
+          "bm25_score": 0.5406,
+          "semantic_score": 0.3303,
+          "score": 0.4354,
+          "rerank_score": -11.3759
+        },
+        {
+          "text": "TechNova synthetic demo financial note for 2026. Sales are generated for academic testing only, not actual company financial statements. Revenue equals product price multiplied by units sold.",
+          "source": "Financial_Report.txt",
+          "chunk": 0,
+          "bm25_score": 0.6455,
+          "semantic_score": 0.3387,
+          "score": 0.4921,
+          "rerank_score": -11.4196
+        }
+      ],
+      "retrieval_latency_seconds": 0.0441,
+      "precision_at_k": 0.2,
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "query": "What happens when inventory stock reaches reorder level?",
+      "relevant": [
+        "Inventory_Policy.txt"
+      ],
+      "retrieved": [
+        {
+          "text": "TechNova synthetic demo inventory policy. Each product has a reorder level. Warehouse staff flag stock at or below reorder level for replenishment. Inventory is reviewed weekly.",
+          "source": "Inventory_Policy.txt",
+          "chunk": 0,
+          "bm25_score": 1.0,
+          "semantic_score": 0.5236,
+          "score": 0.7618,
+          "rerank_score": 2.171
+        },
+        {
+          "text": "TechNova synthetic demo return policy. Customers may request a return within 15 calendar days of delivery if unused and in original packaging. Refunds are processed after inspection, normally within 7 business days.",
+          "source": "Refund_Return_Policy.txt",
+          "chunk": 0,
+          "bm25_score": 0.4302,
+          "semantic_score": 0.3954,
+          "score": 0.4128,
+          "rerank_score": -11.0753
+        },
+        {
+          "text": "TechNova synthetic catalogue: NovaBook Pro laptop INR 75000; NovaView 27 monitor INR 18000; Wireless Mouse accessory INR 1200; NovaBook Air laptop INR 62000; USB-C Dock accessory INR 4500; NovaView 24 monitor INR 12500.",
+          "source": "Product_Catalogue.txt",
+          "chunk": 0,
+          "bm25_score": 0.4302,
+          "semantic_score": 0.3568,
+          "score": 0.3935,
+          "rerank_score": -11.2978
+        },
+        {
+          "text": "TechNova synthetic demo financial note for 2026. Sales are generated for academic testing only, not actual company financial statements. Revenue equals product price multiplied by units sold.",
+          "source": "Financial_Report.txt",
+          "chunk": 0,
+          "bm25_score": 0.4302,
+          "semantic_score": 0.3643,
+          "score": 0.3973,
+          "rerank_score": -11.3999
+        },
+        {
+          "text": "Synthetic demo documents are generated by scripts/generate_demo_data.py.",
+          "source": "README.txt",
+          "chunk": 0,
+          "bm25_score": 0.4302,
+          "semantic_score": 0.0,
+          "score": 0.2151,
+          "rerank_score": -11.4083
+        }
+      ],
+      "retrieval_latency_seconds": 0.0511,
+      "precision_at_k": 0.2,
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "query": "What products are available in the product catalogue?",
+      "relevant": [
+        "Product_Catalogue.txt"
+      ],
+      "retrieved": [
+        {
+          "text": "TechNova synthetic catalogue: NovaBook Pro laptop INR 75000; NovaView 27 monitor INR 18000; Wireless Mouse accessory INR 1200; NovaBook Air laptop INR 62000; USB-C Dock accessory INR 4500; NovaView 24 monitor INR 12500.",
+          "source": "Product_Catalogue.txt",
+          "chunk": 0,
+          "bm25_score": 0.8615,
+          "semantic_score": 0.4933,
+          "score": 0.6774,
+          "rerank_score": -3.517
+        },
+        {
+          "text": "TechNova synthetic demo inventory policy. Each product has a reorder level. Warehouse staff flag stock at or below reorder level for replenishment. Inventory is reviewed weekly.",
+          "source": "Inventory_Policy.txt",
+          "chunk": 0,
+          "bm25_score": 0.8194,
+          "semantic_score": 0.3823,
+          "score": 0.6008,
+          "rerank_score": -8.5644
+        },
+        {
+          "text": "TechNova synthetic demo financial note for 2026. Sales are generated for academic testing only, not actual company financial statements. Revenue equals product price multiplied by units sold.",
+          "source": "Financial_Report.txt",
+          "chunk": 0,
+          "bm25_score": 0.8682,
+          "semantic_score": 0.3905,
+          "score": 0.6293,
+          "rerank_score": -9.7765
+        },
+        {
+          "text": "TechNova synthetic demo return policy. Customers may request a return within 15 calendar days of delivery if unused and in original packaging. Refunds are processed after inspection, normally within 7 business days.",
+          "source": "Refund_Return_Policy.txt",
+          "chunk": 0,
+          "bm25_score": 0.9133,
+          "semantic_score": 0.3391,
+          "score": 0.6262,
+          "rerank_score": -11.0351
+        },
+        {
+          "text": "Synthetic demo documents are generated by scripts/generate_demo_data.py.",
+          "source": "README.txt",
+          "chunk": 0,
+          "bm25_score": 0.7768,
+          "semantic_score": 0.3603,
+          "score": 0.5685,
+          "rerank_score": -11.2242
+        }
+      ],
+      "retrieval_latency_seconds": 0.0461,
+      "precision_at_k": 0.2,
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "query": "What are the company's financial performance details?",
+      "relevant": [
+        "Financial_Report.txt"
+      ],
+      "retrieved": [
+        {
+          "text": "TechNova synthetic demo financial note for 2026. Sales are generated for academic testing only, not actual company financial statements. Revenue equals product price multiplied by units sold.",
+          "source": "Financial_Report.txt",
+          "chunk": 0,
+          "bm25_score": 1.0,
+          "semantic_score": 0.4197,
+          "score": 0.7099,
+          "rerank_score": -8.2631
+        },
+        {
+          "text": "TechNova synthetic catalogue: NovaBook Pro laptop INR 75000; NovaView 27 monitor INR 18000; Wireless Mouse accessory INR 1200; NovaBook Air laptop INR 62000; USB-C Dock accessory INR 4500; NovaView 24 monitor INR 12500.",
+          "source": "Product_Catalogue.txt",
+          "chunk": 0,
+          "bm25_score": 0.5506,
+          "semantic_score": 0.3652,
+          "score": 0.4579,
+          "rerank_score": -11.3302
+        },
+        {
+          "text": "TechNova synthetic demo inventory policy. Each product has a reorder level. Warehouse staff flag stock at or below reorder level for replenishment. Inventory is reviewed weekly.",
+          "source": "Inventory_Policy.txt",
+          "chunk": 0,
+          "bm25_score": 0.5506,
+          "semantic_score": 0.3534,
+          "score": 0.452,
+          "rerank_score": -11.3553
+        },
+        {
+          "text": "TechNova synthetic demo return policy. Customers may request a return within 15 calendar days of delivery if unused and in original packaging. Refunds are processed after inspection, normally within 7 business days.",
+          "source": "Refund_Return_Policy.txt",
+          "chunk": 0,
+          "bm25_score": 0.5944,
+          "semantic_score": 0.3508,
+          "score": 0.4726,
+          "rerank_score": -11.3616
+        },
+        {
+          "text": "TechNova synthetic demo HR policy. Casual leave requires manager approval. HR requests are submitted through the employee portal. Payroll is processed on the final working day of each month.",
+          "source": "HR_Policy.txt",
+          "chunk": 0,
+          "bm25_score": 0.8277,
+          "semantic_score": 0.3457,
+          "score": 0.5867,
+          "rerank_score": -11.3993
+        }
+      ],
+      "retrieval_latency_seconds": 0.045,
+      "precision_at_k": 0.2,
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0
+    }
+  ]
+}

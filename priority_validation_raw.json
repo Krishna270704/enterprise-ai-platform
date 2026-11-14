@@ -1,0 +1,447 @@
+{
+  "measured_at": "2026-11-10T21:54:02Z",
+  "dataset": "Synthetic TechNova documents and enterprise_ai_demo PostgreSQL records",
+  "rag": {
+    "cases": [
+      {
+        "query_id": "RAG-01",
+        "question": "What is the return window?",
+        "expected_relevant_source": "Refund_Return_Policy.txt",
+        "retrieved_sources": "Refund_Return_Policy.txt",
+        "retrieved_document_count": 1,
+        "precision_at_5": 0.2,
+        "precision_over_returned": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "result": "PASS",
+        "latency_seconds": 9.2367
+      },
+      {
+        "query_id": "RAG-02",
+        "question": "When are refunds processed?",
+        "expected_relevant_source": "Refund_Return_Policy.txt",
+        "retrieved_sources": "Refund_Return_Policy.txt|HR_Policy.txt",
+        "retrieved_document_count": 2,
+        "precision_at_5": 0.2,
+        "precision_over_returned": 0.5,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "result": "REVIEW_REQUIRED",
+        "latency_seconds": 1.1617
+      },
+      {
+        "query_id": "RAG-03",
+        "question": "What is the casual leave policy?",
+        "expected_relevant_source": "HR_Policy.txt",
+        "retrieved_sources": "HR_Policy.txt|Refund_Return_Policy.txt|Inventory_Policy.txt",
+        "retrieved_document_count": 3,
+        "precision_at_5": 0.2,
+        "precision_over_returned": 0.3333,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "result": "REVIEW_REQUIRED",
+        "latency_seconds": 1.5459
+      },
+      {
+        "query_id": "RAG-04",
+        "question": "Where are HR requests submitted?",
+        "expected_relevant_source": "HR_Policy.txt",
+        "retrieved_sources": "HR_Policy.txt",
+        "retrieved_document_count": 1,
+        "precision_at_5": 0.2,
+        "precision_over_returned": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "result": "PASS",
+        "latency_seconds": 0.6614
+      },
+      {
+        "query_id": "RAG-05",
+        "question": "What happens at the inventory reorder level?",
+        "expected_relevant_source": "Inventory_Policy.txt",
+        "retrieved_sources": "Inventory_Policy.txt",
+        "retrieved_document_count": 1,
+        "precision_at_5": 0.2,
+        "precision_over_returned": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "result": "PASS",
+        "latency_seconds": 0.6298
+      },
+      {
+        "query_id": "RAG-06",
+        "question": "How often is inventory reviewed?",
+        "expected_relevant_source": "Inventory_Policy.txt",
+        "retrieved_sources": "Inventory_Policy.txt",
+        "retrieved_document_count": 1,
+        "precision_at_5": 0.2,
+        "precision_over_returned": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "result": "PASS",
+        "latency_seconds": 0.6596
+      },
+      {
+        "query_id": "RAG-07",
+        "question": "What products are in the catalogue?",
+        "expected_relevant_source": "Product_Catalogue.txt",
+        "retrieved_sources": "Product_Catalogue.txt",
+        "retrieved_document_count": 1,
+        "precision_at_5": 0.2,
+        "precision_over_returned": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "result": "PASS",
+        "latency_seconds": 0.898
+      },
+      {
+        "query_id": "RAG-08",
+        "question": "What is the NovaBook Pro price?",
+        "expected_relevant_source": "Product_Catalogue.txt",
+        "retrieved_sources": "Product_Catalogue.txt|Financial_Report.txt",
+        "retrieved_document_count": 2,
+        "precision_at_5": 0.2,
+        "precision_over_returned": 0.5,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "result": "REVIEW_REQUIRED",
+        "latency_seconds": 1.2139
+      },
+      {
+        "query_id": "RAG-09",
+        "question": "How is revenue calculated?",
+        "expected_relevant_source": "Financial_Report.txt",
+        "retrieved_sources": "Financial_Report.txt",
+        "retrieved_document_count": 1,
+        "precision_at_5": 0.2,
+        "precision_over_returned": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "result": "PASS",
+        "latency_seconds": 1.5001
+      },
+      {
+        "query_id": "RAG-10",
+        "question": "Is the financial note an actual company statement?",
+        "expected_relevant_source": "Financial_Report.txt",
+        "retrieved_sources": "Financial_Report.txt",
+        "retrieved_document_count": 1,
+        "precision_at_5": 0.2,
+        "precision_over_returned": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "result": "PASS",
+        "latency_seconds": 0.9033
+      }
+    ],
+    "precision_at_5": 0.2,
+    "precision_over_returned": 0.8333,
+    "recall_at_5": 1.0,
+    "mrr": 1.0,
+    "path": "C:\\Users\\KRISHNA\\OneDrive\\Desktop\\Minor project\\enterprise-ai-data-intelligence\\RAG_EVALUATION_RESULTS.csv"
+  },
+  "sql": {
+    "cases": [
+      {
+        "query_id": "SQL-01",
+        "natural_language_question": "How many customers are there?",
+        "generated_sql": "SELECT COUNT(*) AS customer_count FROM customers",
+        "expected_result": "[{\"count\": 30}]",
+        "actual_result": "[{\"customer_count\": 30}]",
+        "correctness": "PASS",
+        "execution_status": "success",
+        "latency_seconds": 3.9262
+      },
+      {
+        "query_id": "SQL-02",
+        "natural_language_question": "How many employees are there?",
+        "generated_sql": "SELECT COUNT(*) AS employee_count FROM employees",
+        "expected_result": "[{\"count\": 15}]",
+        "actual_result": "[{\"employee_count\": 15}]",
+        "correctness": "PASS",
+        "execution_status": "success",
+        "latency_seconds": 1.2633
+      },
+      {
+        "query_id": "SQL-03",
+        "natural_language_question": "How many products are there?",
+        "generated_sql": "SELECT COUNT(*) AS product_count FROM products",
+        "expected_result": "[{\"count\": 6}]",
+        "actual_result": "[{\"product_count\": 6}]",
+        "correctness": "PASS",
+        "execution_status": "success",
+        "latency_seconds": 3.3211
+      },
+      {
+        "query_id": "SQL-04",
+        "natural_language_question": "How many orders are there?",
+        "generated_sql": "SELECT COUNT(*) FROM orders",
+        "expected_result": "[{\"count\": 120}]",
+        "actual_result": "[{\"count\": 120}]",
+        "correctness": "PASS",
+        "execution_status": "success",
+        "latency_seconds": 0.8723
+      },
+      {
+        "query_id": "SQL-05",
+        "natural_language_question": "How many delivered orders are there?",
+        "generated_sql": "SELECT COUNT(*) FROM orders WHERE status = 'Delivered'",
+        "expected_result": "[{\"count\": 63}]",
+        "actual_result": "[{\"count\": 63}]",
+        "correctness": "PASS",
+        "execution_status": "success",
+        "latency_seconds": 0.9531
+      },
+      {
+        "query_id": "SQL-06",
+        "natural_language_question": "What is the total revenue?",
+        "generated_sql": "SELECT SUM(revenue) AS total_revenue FROM sales",
+        "expected_result": "[{\"sum\": \"10527300\"}]",
+        "actual_result": "[{\"total_revenue\": \"10527300\"}]",
+        "correctness": "PASS",
+        "execution_status": "success",
+        "latency_seconds": 1.7389
+      },
+      {
+        "query_id": "SQL-07",
+        "natural_language_question": "Show monthly revenue.",
+        "generated_sql": "SELECT date_trunc('month', sale_date) AS month, SUM(revenue) AS total_revenue\nFROM sales\nGROUP BY month\nORDER BY month",
+        "expected_result": "[{\"to_char\": \"2026-01\", \"sum\": \"1401500\"}, {\"to_char\": \"2026-02\", \"sum\": \"731100\"}, {\"to_char\": \"2026-03\", \"sum\": \"1055700\"}, {\"to_char\": \"2026-04\", \"sum\": \"546000\"}, {\"to_char\": \"2026-05\", \"sum\": \"1569800\"}, {\"to_char\": \"2026-06\", \"sum\": \"1253400\"}, {\"to_char\": \"2026-07\", \"sum\": \"918500\"}, {\"to_char\": \"2026-08\", \"sum\": \"1281900\"}, {\"to_char\": \"2026-09\", \"sum\": \"1186200\"}, {\"to_char\": \"2026-10\", \"sum\": \"583200\"}]",
+        "actual_result": "[{\"month\": \"2026-01-01 00:00:00+05:30\", \"total_revenue\": \"1401500\"}, {\"month\": \"2026-02-01 00:00:00+05:30\", \"total_revenue\": \"731100\"}, {\"month\": \"2026-03-01 00:00:00+05:30\", \"total_revenue\": \"1055700\"}, {\"month\": \"2026-04-01 00:00:00+05:30\", \"total_revenue\": \"546000\"}, {\"month\": \"2026-05-01 00:00:00+05:30\", \"total_revenue\": \"1569800\"}, {\"month\": \"2026-06-01 00:00:00+05:30\", \"total_revenue\": \"1253400\"}, {\"month\": \"2026-07-01 00:00:00+05:30\", \"total_revenue\": \"918500\"}, {\"month\": \"2026-08-01 00:00:00+05:30\", \"total_revenue\": \"1281900\"}, {\"month\": \"2026-09-01 00:00:00+05:30\", \"total_revenue\": \"1186200\"}, {\"month\": \"2026-10-01 00:00:00+05:30\", \"total_revenue\": \"583200\"}]",
+        "correctness": "PASS",
+        "execution_status": "success",
+        "latency_seconds": 1.059
+      },
+      {
+        "query_id": "SQL-08",
+        "natural_language_question": "Show revenue by city.",
+        "generated_sql": "SELECT city, SUM(revenue) AS total_revenue\nFROM sales\nGROUP BY city",
+        "expected_result": "[{\"city\": \"Delhi\", \"sum\": \"3812500\"}, {\"city\": \"Gurugram\", \"sum\": \"3421100\"}, {\"city\": \"Jaipur\", \"sum\": \"3134100\"}, {\"city\": \"Noida\", \"sum\": \"159600\"}]",
+        "actual_result": "[{\"city\": \"Noida\", \"total_revenue\": \"159600\"}, {\"city\": \"Gurugram\", \"total_revenue\": \"3421100\"}, {\"city\": \"Jaipur\", \"total_revenue\": \"3134100\"}, {\"city\": \"Delhi\", \"total_revenue\": \"3812500\"}]",
+        "correctness": "PASS",
+        "execution_status": "success",
+        "latency_seconds": 1.0686
+      },
+      {
+        "query_id": "SQL-09",
+        "natural_language_question": "Show product-wise sales revenue.",
+        "generated_sql": "SELECT p.product_id, p.name, SUM(s.revenue) AS total_revenue\nFROM sales s\nJOIN products p ON s.product_id = p.product_id\nGROUP BY p.product_id, p.name",
+        "expected_result": "[{\"name\": \"NovaBook Air\", \"sum\": \"4588000\"}, {\"name\": \"NovaBook Pro\", \"sum\": \"4575000\"}, {\"name\": \"NovaView 24\", \"sum\": \"425000\"}, {\"name\": \"NovaView 27\", \"sum\": \"720000\"}, {\"name\": \"USB-C Dock\", \"sum\": \"166500\"}, {\"name\": \"Wireless Mouse\", \"sum\": \"52800\"}]",
+        "actual_result": "[{\"product_id\": \"P005\", \"name\": \"USB-C Dock\", \"total_revenue\": \"166500\"}, {\"product_id\": \"P001\", \"name\": \"NovaBook Pro\", \"total_revenue\": \"4575000\"}, {\"product_id\": \"P006\", \"name\": \"NovaView 24\", \"total_revenue\": \"425000\"}, {\"product_id\": \"P002\", \"name\": \"NovaView 27\", \"total_revenue\": \"720000\"}, {\"product_id\": \"P004\", \"name\": \"NovaBook Air\", \"total_revenue\": \"4588000\"}, {\"product_id\": \"P003\", \"name\": \"Wireless Mouse\", \"total_revenue\": \"52800\"}]",
+        "correctness": "PASS",
+        "execution_status": "success",
+        "latency_seconds": 1.2206
+      },
+      {
+        "query_id": "SQL-10",
+        "natural_language_question": "Which inventory items are below reorder level?",
+        "generated_sql": "SELECT i.product_id, p.name, i.warehouse, i.stock, i.reorder_level\nFROM inventory i\nJOIN products p ON i.product_id = p.product_id\nWHERE i.stock < i.reorder_level",
+        "expected_result": "[{\"product_id\": \"P002\", \"stock\": 13, \"reorder_level\": 20}, {\"product_id\": \"P006\", \"stock\": 14, \"reorder_level\": 20}]",
+        "actual_result": "[{\"product_id\": \"P002\", \"name\": \"NovaView 27\", \"warehouse\": \"Delhi Central Warehouse\", \"stock\": 13, \"reorder_level\": 20}, {\"product_id\": \"P006\", \"name\": \"NovaView 24\", \"warehouse\": \"Delhi Central Warehouse\", \"stock\": 14, \"reorder_level\": 20}]",
+        "correctness": "PASS",
+        "execution_status": "success",
+        "latency_seconds": 1.3004
+      }
+    ],
+    "accuracy": 1.0,
+    "safety_cases": 8,
+    "safety_passed": 8,
+    "path": "C:\\Users\\KRISHNA\\OneDrive\\Desktop\\Minor project\\enterprise-ai-data-intelligence\\SQL_EVALUATION_RESULTS.csv"
+  },
+  "analytics": {
+    "rows": [
+      {
+        "metric": "monthly_revenue",
+        "expected_sql_result": "{\"2026-01\": 1401500.0, \"2026-02\": 731100.0, \"2026-03\": 1055700.0, \"2026-04\": 546000.0, \"2026-05\": 1569800.0, \"2026-06\": 1253400.0, \"2026-07\": 918500.0, \"2026-08\": 1281900.0, \"2026-09\": 1186200.0, \"2026-10\": 583200.0}",
+        "actual_application_result": "{\"2026-01\": 1401500.0, \"2026-02\": 731100.0, \"2026-03\": 1055700.0, \"2026-04\": 546000.0, \"2026-05\": 1569800.0, \"2026-06\": 1253400.0, \"2026-07\": 918500.0, \"2026-08\": 1281900.0, \"2026-09\": 1186200.0, \"2026-10\": 583200.0}",
+        "difference": "0",
+        "validation_status": "PASS"
+      },
+      {
+        "metric": "maximum_month",
+        "expected_sql_result": "[\"2026-05\", 1569800.0]",
+        "actual_application_result": "[\"2026-05\", 1569800.0]",
+        "difference": "0",
+        "validation_status": "PASS"
+      },
+      {
+        "metric": "minimum_month",
+        "expected_sql_result": "[\"2026-04\", 546000.0]",
+        "actual_application_result": "[\"2026-04\", 546000.0]",
+        "difference": "0",
+        "validation_status": "PASS"
+      },
+      {
+        "metric": "city_revenue",
+        "expected_sql_result": "{\"Delhi\": 3812500.0, \"Gurugram\": 3421100.0, \"Jaipur\": 3134100.0, \"Noida\": 159600.0}",
+        "actual_application_result": "{\"Delhi\": 3812500.0, \"Gurugram\": 3421100.0, \"Jaipur\": 3134100.0, \"Noida\": 159600.0}",
+        "difference": "0",
+        "validation_status": "PASS"
+      },
+      {
+        "metric": "product_revenue",
+        "expected_sql_result": "{\"NovaBook Air\": 4588000.0, \"NovaBook Pro\": 4575000.0, \"NovaView 24\": 425000.0, \"NovaView 27\": 720000.0, \"USB-C Dock\": 166500.0, \"Wireless Mouse\": 52800.0}",
+        "actual_application_result": "{\"NovaBook Air\": 4588000.0, \"NovaBook Pro\": 4575000.0, \"NovaView 27\": 720000.0, \"NovaView 24\": 425000.0, \"USB-C Dock\": 166500.0, \"Wireless Mouse\": 52800.0}",
+        "difference": "0",
+        "validation_status": "PASS"
+      },
+      {
+        "metric": "anomaly_indicators",
+        "expected_sql_result": "\"{('2026-09-27', 'Delhi', 300000.0), ('2026-08-02', 'Delhi', 300000.0), ('2026-08-17', 'Jaipur', 300000.0), ('2026-01-22', 'Gurugram', 300000.0), ('2026-05-31', 'Delhi', 300000.0), ('2026-06-27', 'Jaipur', 300000.0)}\"",
+        "actual_application_result": "\"{('2026-09-27', 'Delhi', 300000.0), ('2026-08-02', 'Delhi', 300000.0), ('2026-08-17', 'Jaipur', 300000.0), ('2026-01-22', 'Gurugram', 300000.0), ('2026-05-31', 'Delhi', 300000.0), ('2026-06-27', 'Jaipur', 300000.0)}\"",
+        "difference": "0",
+        "validation_status": "PASS"
+      },
+      {
+        "metric": "forecast_output",
+        "expected_sql_result": "No labelled future target available",
+        "actual_application_result": "{\"status\": \"available\", \"next_month\": \"2026-11\", \"predicted_revenue\": 977833.33, \"method\": \"Linear regression on monthly revenue\", \"note\": \"Experimental estimate, not a validated business forecast.\"}",
+        "difference": "not measurable",
+        "validation_status": "EXPERIMENTAL_UNVALIDATED"
+      }
+    ],
+    "passed": 6,
+    "failed": 0,
+    "forecast": {
+      "status": "available",
+      "next_month": "2026-11",
+      "predicted_revenue": 977833.33,
+      "method": "Linear regression on monthly revenue",
+      "note": "Experimental estimate, not a validated business forecast."
+    },
+    "path": "C:\\Users\\KRISHNA\\OneDrive\\Desktop\\Minor project\\enterprise-ai-data-intelligence\\ANALYTICS_VALIDATION_RESULTS.csv"
+  },
+  "ingestion": {
+    "checks": [
+      {
+        "format": ".txt",
+        "extracted_text": "Temporary TXT leave policy.",
+        "chunks": 1
+      },
+      {
+        "format": ".md",
+        "extracted_text": "# Temporary Markdown policy.",
+        "chunks": 1
+      },
+      {
+        "format": ".csv",
+        "extracted_text": "key,value\nleave,approval\n",
+        "chunks": 1
+      },
+      {
+        "format": ".docx",
+        "extracted_text": "Temporary DOCX policy.",
+        "chunks": 1
+      },
+      {
+        "format": ".pdf",
+        "extracted_text": "Temporary PDF policy.",
+        "chunks": 1
+      }
+    ],
+    "all_extraction_paths_exercised": true,
+    "temporary_sources": [
+      "__priority_validation_699f79c1ba0c4772b1d066a75b794fb0.txt",
+      "__priority_validation_699f79c1ba0c4772b1d066a75b794fb0.md",
+      "__priority_validation_699f79c1ba0c4772b1d066a75b794fb0.csv",
+      "__priority_validation_699f79c1ba0c4772b1d066a75b794fb0.docx",
+      "__priority_validation_699f79c1ba0c4772b1d066a75b794fb0.pdf"
+    ],
+    "chroma_existing_sources_intact": true,
+    "chroma_record_count_before": 19,
+    "chroma_record_count_after": 19
+  },
+  "verification": [
+    {
+      "case": "supported_claim",
+      "expected": "supported",
+      "actual": "supported",
+      "pass": true
+    },
+    {
+      "case": "unsupported_claim",
+      "expected": "review_required",
+      "actual": "review_required",
+      "pass": true
+    },
+    {
+      "case": "unsupported_number",
+      "expected": "review_required",
+      "actual": "review_required",
+      "pass": true
+    },
+    {
+      "case": "missing_evidence",
+      "expected": "insufficient_evidence",
+      "actual": "insufficient_evidence",
+      "pass": true
+    }
+  ],
+  "routes": [
+    {
+      "expected_route": "documents",
+      "actual_route": "documents",
+      "question": "What is the HR policy?",
+      "executed_evidence_types": "document",
+      "module_errors": "[]",
+      "pass": true
+    },
+    {
+      "expected_route": "sql",
+      "actual_route": "sql",
+      "question": "How many customers are there?",
+      "executed_evidence_types": "database",
+      "module_errors": "[]",
+      "pass": true
+    },
+    {
+      "expected_route": "analytics",
+      "actual_route": "analytics",
+      "question": "Show monthly sales trend",
+      "executed_evidence_types": "analytics",
+      "module_errors": "[]",
+      "pass": true
+    },
+    {
+      "expected_route": "hybrid",
+      "actual_route": "hybrid",
+      "question": "What is the refund policy and how many customers are there?",
+      "executed_evidence_types": "database|document",
+      "module_errors": "[]",
+      "pass": true
+    },
+    {
+      "expected_route": "document_analytics",
+      "actual_route": "document_analytics",
+      "question": "What is the leave policy and show monthly trend?",
+      "executed_evidence_types": "analytics|document",
+      "module_errors": "[]",
+      "pass": true
+    },
+    {
+      "expected_route": "sql_analytics",
+      "actual_route": "sql_analytics",
+      "question": "What is total revenue trend?",
+      "executed_evidence_types": "analytics|database",
+      "module_errors": "[]",
+      "pass": true
+    },
+    {
+      "expected_route": "full_hybrid",
+      "actual_route": "full_hybrid",
+      "question": "According to the HR policy, how many customers are there and what is the monthly sales trend?",
+      "executed_evidence_types": "analytics|database|document",
+      "module_errors": "[]",
+      "pass": true
+    }
+  ],
+  "casual_leave": {
+    "question": "What is the process for taking casual leave?",
+    "http_status": 200,
+    "sources": "HR_Policy.txt",
+    "verification_status": "review_required",
+    "unsupported_payroll_link_detected": false,
+    "answer": "**Process for Taking Casual Leave**\n\n| Step | Action | Source |\n|------|--------|--------|\n| 1 | Submit an HR request for casual leave through the employee portal. | HR_Policy.txt |\n| 2 | Obtain approval from your manager. | HR_Policy.txt |\n\n*Interpretation*: The casual leave procedure consists of two required actions: (1) the employee initiates the request via the portal, and (2) the request must be approved by the employee\u2019s manager. No additional steps are indicated in the available evidence.",
+    "pass": true
+  }
+}

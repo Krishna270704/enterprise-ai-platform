@@ -1,0 +1,6 @@
+query,precision_at_k,recall_at_k,reciprocal_rank,retrieval_latency_seconds,latency_phase
+What is the refund and return policy?,0.2,1.0,1.0,10.8427,cold_start
+What is the company employee leave policy?,0.2,1.0,1.0,0.0441,warm
+What happens when inventory stock reaches reorder level?,0.2,1.0,1.0,0.0511,warm
+What products are available in the product catalogue?,0.2,1.0,1.0,0.0461,warm
+What are the company's financial performance details?,0.2,1.0,1.0,0.045,warm

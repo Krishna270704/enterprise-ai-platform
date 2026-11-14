@@ -1,0 +1,7 @@
+product_id,warehouse,stock,reorder_level
+P001,Delhi Central Warehouse,52,20
+P002,Delhi Central Warehouse,13,20
+P003,Delhi Central Warehouse,55,20
+P004,Delhi Central Warehouse,54,20
+P005,Delhi Central Warehouse,80,20
+P006,Delhi Central Warehouse,14,20

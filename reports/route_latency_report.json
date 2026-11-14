@@ -1,0 +1,41 @@
+{
+  "routes": [
+    {
+      "route": "documents",
+      "query_name": "document-only",
+      "latency_seconds": 1.0041,
+      "pass": true
+    },
+    {
+      "route": "sql",
+      "query_name": "sql-only",
+      "latency_seconds": 2.1206,
+      "pass": true
+    },
+    {
+      "route": "analytics",
+      "query_name": "analytics-only",
+      "latency_seconds": 9.5473,
+      "pass": true
+    },
+    {
+      "route": "hybrid",
+      "query_name": "hybrid",
+      "latency_seconds": 12.233,
+      "pass": true
+    },
+    {
+      "route": "full_hybrid",
+      "query_name": "full-hybrid",
+      "latency_seconds": 25.9462,
+      "pass": true
+    }
+  ],
+  "average_latency_by_route": {
+    "analytics": 9.5473,
+    "documents": 1.0041,
+    "full_hybrid": 25.9462,
+    "hybrid": 12.233,
+    "sql": 2.1206
+  }
+}

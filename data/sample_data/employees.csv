@@ -1,0 +1,16 @@
+employee_id,name,department,city,salary
+E001,Employee 1,IT,Gurugram,70000
+E002,Employee 2,Operations,Gurugram,85000
+E003,Employee 3,Operations,Gurugram,75000
+E004,Employee 4,Sales,Delhi,70000
+E005,Employee 5,Operations,Delhi,90000
+E006,Employee 6,Finance,Delhi,100000
+E007,Employee 7,Operations,Gurugram,30000
+E008,Employee 8,Sales,Noida,75000
+E009,Employee 9,Finance,Gurugram,85000
+E010,Employee 10,Finance,Noida,65000
+E011,Employee 11,IT,Gurugram,35000
+E012,Employee 12,Sales,Gurugram,65000
+E013,Employee 13,Sales,Delhi,85000
+E014,Employee 14,Finance,Noida,75000
+E015,Employee 15,Operations,Gurugram,85000

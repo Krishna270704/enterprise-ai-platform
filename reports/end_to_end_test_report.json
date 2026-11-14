@@ -1,0 +1,482 @@
+{
+  "measured_at": "2026-11-03T22:26:10.285560+00:00",
+  "api_url": "http://127.0.0.1:8000",
+  "tests": [
+    {
+      "name": "document-only",
+      "question": "What is the employee leave policy?",
+      "expected_route": "documents",
+      "http_status": 500,
+      "client_latency_seconds": 0.1634,
+      "actual_route": null,
+      "route_pass": false,
+      "required_modules": [
+        "document"
+      ],
+      "executed_modules": [],
+      "modules_pass": false,
+      "evidence_sources": [],
+      "evidence_pass": false,
+      "answer": "",
+      "answer_fact_checks": {
+        "manager approval": false,
+        "employee portal": false
+      },
+      "answer_facts_pass": false,
+      "verification": null,
+      "verification_status": "missing",
+      "semantic_factual_verification": "not_performed",
+      "verifier_unit_test_status": "reported_separately",
+      "module_errors": [],
+      "unsupported_fact_check": "missing",
+      "monthly_data_checks": {},
+      "monthly_answer_checks": {},
+      "monthly_answer_facts_pass": true,
+      "functional_pass": false,
+      "pass": false
+    },
+    {
+      "name": "sql-only",
+      "question": "How many customers are there?",
+      "expected_route": "sql",
+      "http_status": 200,
+      "client_latency_seconds": 0.0847,
+      "actual_route": "sql",
+      "route_pass": true,
+      "required_modules": [
+        "database"
+      ],
+      "executed_modules": [],
+      "modules_pass": false,
+      "evidence_sources": [],
+      "evidence_pass": false,
+      "answer": "Insufficient evidence. Upload relevant documents or load the demo database.",
+      "answer_fact_checks": {
+        "30": false
+      },
+      "answer_facts_pass": false,
+      "verification": {
+        "support_ratio": 0.0,
+        "status": "insufficient_evidence",
+        "method": "evidence availability check"
+      },
+      "verification_status": "insufficient_evidence",
+      "semantic_factual_verification": "not_performed",
+      "verifier_unit_test_status": "reported_separately",
+      "module_errors": [
+        {
+          "module": "sql",
+          "error": "SQL execution failed. Check server logs."
+        }
+      ],
+      "unsupported_fact_check": "insufficient_evidence",
+      "monthly_data_checks": {},
+      "monthly_answer_checks": {},
+      "monthly_answer_facts_pass": true,
+      "functional_pass": false,
+      "pass": false
+    },
+    {
+      "name": "analytics-only",
+      "question": "Show monthly sales trend",
+      "expected_route": "analytics",
+      "http_status": 500,
+      "client_latency_seconds": 0.1092,
+      "actual_route": null,
+      "route_pass": false,
+      "required_modules": [
+        "analytics"
+      ],
+      "executed_modules": [],
+      "modules_pass": false,
+      "evidence_sources": [],
+      "evidence_pass": false,
+      "answer": "",
+      "answer_fact_checks": {
+        "2026-01": false,
+        "2026-10": false
+      },
+      "answer_facts_pass": false,
+      "verification": null,
+      "verification_status": "missing",
+      "semantic_factual_verification": "not_performed",
+      "verifier_unit_test_status": "reported_separately",
+      "module_errors": [],
+      "unsupported_fact_check": "missing",
+      "monthly_data_checks": {
+        "all_figures_match_postgresql": false,
+        "expected_maximum": {
+          "month": "2026-05",
+          "revenue": 1569800.0
+        },
+        "expected_minimum": {
+          "month": "2026-04",
+          "revenue": 546000.0
+        }
+      },
+      "monthly_answer_checks": {
+        "2026-01_revenue": false,
+        "2026-02_revenue": false,
+        "2026-03_revenue": false,
+        "2026-04_revenue": false,
+        "2026-05_revenue": false,
+        "2026-06_revenue": false,
+        "2026-07_revenue": false,
+        "2026-08_revenue": false,
+        "2026-09_revenue": false,
+        "2026-10_revenue": false,
+        "maximum_month_and_revenue": false,
+        "minimum_month_and_revenue": false,
+        "maximum_interpretation": false,
+        "minimum_interpretation": false
+      },
+      "monthly_answer_facts_pass": false,
+      "functional_pass": false,
+      "pass": false
+    },
+    {
+      "name": "hybrid",
+      "question": "According to the refund policy, how many customers are in the database?",
+      "expected_route": "hybrid",
+      "http_status": 500,
+      "client_latency_seconds": 0.2213,
+      "actual_route": null,
+      "route_pass": false,
+      "required_modules": [
+        "database",
+        "document"
+      ],
+      "executed_modules": [],
+      "modules_pass": false,
+      "evidence_sources": [],
+      "evidence_pass": false,
+      "answer": "",
+      "answer_fact_checks": {
+        "30": false
+      },
+      "answer_facts_pass": false,
+      "verification": null,
+      "verification_status": "missing",
+      "semantic_factual_verification": "not_performed",
+      "verifier_unit_test_status": "reported_separately",
+      "module_errors": [],
+      "unsupported_fact_check": "missing",
+      "monthly_data_checks": {},
+      "monthly_answer_checks": {},
+      "monthly_answer_facts_pass": true,
+      "functional_pass": false,
+      "pass": false
+    },
+    {
+      "name": "full-hybrid",
+      "question": "According to the refund policy, what is the return window, how many customers are in the database, and what is the monthly sales trend?",
+      "expected_route": "full_hybrid",
+      "http_status": 500,
+      "client_latency_seconds": 0.2845,
+      "actual_route": null,
+      "route_pass": false,
+      "required_modules": [
+        "analytics",
+        "database",
+        "document"
+      ],
+      "executed_modules": [],
+      "modules_pass": false,
+      "evidence_sources": [],
+      "evidence_pass": false,
+      "answer": "",
+      "answer_fact_checks": {
+        "15 calendar days": false,
+        "30": false,
+        "revenue": false
+      },
+      "answer_facts_pass": false,
+      "verification": null,
+      "verification_status": "missing",
+      "semantic_factual_verification": "not_performed",
+      "verifier_unit_test_status": "reported_separately",
+      "module_errors": [],
+      "unsupported_fact_check": "missing",
+      "monthly_data_checks": {
+        "all_figures_match_postgresql": false,
+        "expected_maximum": {
+          "month": "2026-05",
+          "revenue": 1569800.0
+        },
+        "expected_minimum": {
+          "month": "2026-04",
+          "revenue": 546000.0
+        }
+      },
+      "monthly_answer_checks": {
+        "2026-01_revenue": false,
+        "2026-02_revenue": false,
+        "2026-03_revenue": false,
+        "2026-04_revenue": false,
+        "2026-05_revenue": false,
+        "2026-06_revenue": false,
+        "2026-07_revenue": false,
+        "2026-08_revenue": false,
+        "2026-09_revenue": false,
+        "2026-10_revenue": false,
+        "maximum_month_and_revenue": false,
+        "minimum_month_and_revenue": false,
+        "maximum_interpretation": false,
+        "minimum_interpretation": false
+      },
+      "monthly_answer_facts_pass": false,
+      "functional_pass": false,
+      "pass": false
+    }
+  ],
+  "pass_count": 0,
+  "fail_count": 5,
+  "failures": [
+    {
+      "test": "document-only",
+      "reason": "API contract or evidence assertion failed",
+      "details": {
+        "name": "document-only",
+        "question": "What is the employee leave policy?",
+        "expected_route": "documents",
+        "http_status": 500,
+        "client_latency_seconds": 0.1634,
+        "actual_route": null,
+        "route_pass": false,
+        "required_modules": [
+          "document"
+        ],
+        "executed_modules": [],
+        "modules_pass": false,
+        "evidence_sources": [],
+        "evidence_pass": false,
+        "answer": "",
+        "answer_fact_checks": {
+          "manager approval": false,
+          "employee portal": false
+        },
+        "answer_facts_pass": false,
+        "verification": null,
+        "verification_status": "missing",
+        "semantic_factual_verification": "not_performed",
+        "verifier_unit_test_status": "reported_separately",
+        "module_errors": [],
+        "unsupported_fact_check": "missing",
+        "monthly_data_checks": {},
+        "monthly_answer_checks": {},
+        "monthly_answer_facts_pass": true,
+        "functional_pass": false,
+        "pass": false
+      }
+    },
+    {
+      "test": "sql-only",
+      "reason": "API contract or evidence assertion failed",
+      "details": {
+        "name": "sql-only",
+        "question": "How many customers are there?",
+        "expected_route": "sql",
+        "http_status": 200,
+        "client_latency_seconds": 0.0847,
+        "actual_route": "sql",
+        "route_pass": true,
+        "required_modules": [
+          "database"
+        ],
+        "executed_modules": [],
+        "modules_pass": false,
+        "evidence_sources": [],
+        "evidence_pass": false,
+        "answer": "Insufficient evidence. Upload relevant documents or load the demo database.",
+        "answer_fact_checks": {
+          "30": false
+        },
+        "answer_facts_pass": false,
+        "verification": {
+          "support_ratio": 0.0,
+          "status": "insufficient_evidence",
+          "method": "evidence availability check"
+        },
+        "verification_status": "insufficient_evidence",
+        "semantic_factual_verification": "not_performed",
+        "verifier_unit_test_status": "reported_separately",
+        "module_errors": [
+          {
+            "module": "sql",
+            "error": "SQL execution failed. Check server logs."
+          }
+        ],
+        "unsupported_fact_check": "insufficient_evidence",
+        "monthly_data_checks": {},
+        "monthly_answer_checks": {},
+        "monthly_answer_facts_pass": true,
+        "functional_pass": false,
+        "pass": false
+      }
+    },
+    {
+      "test": "analytics-only",
+      "reason": "API contract or evidence assertion failed",
+      "details": {
+        "name": "analytics-only",
+        "question": "Show monthly sales trend",
+        "expected_route": "analytics",
+        "http_status": 500,
+        "client_latency_seconds": 0.1092,
+        "actual_route": null,
+        "route_pass": false,
+        "required_modules": [
+          "analytics"
+        ],
+        "executed_modules": [],
+        "modules_pass": false,
+        "evidence_sources": [],
+        "evidence_pass": false,
+        "answer": "",
+        "answer_fact_checks": {
+          "2026-01": false,
+          "2026-10": false
+        },
+        "answer_facts_pass": false,
+        "verification": null,
+        "verification_status": "missing",
+        "semantic_factual_verification": "not_performed",
+        "verifier_unit_test_status": "reported_separately",
+        "module_errors": [],
+        "unsupported_fact_check": "missing",
+        "monthly_data_checks": {
+          "all_figures_match_postgresql": false,
+          "expected_maximum": {
+            "month": "2026-05",
+            "revenue": 1569800.0
+          },
+          "expected_minimum": {
+            "month": "2026-04",
+            "revenue": 546000.0
+          }
+        },
+        "monthly_answer_checks": {
+          "2026-01_revenue": false,
+          "2026-02_revenue": false,
+          "2026-03_revenue": false,
+          "2026-04_revenue": false,
+          "2026-05_revenue": false,
+          "2026-06_revenue": false,
+          "2026-07_revenue": false,
+          "2026-08_revenue": false,
+          "2026-09_revenue": false,
+          "2026-10_revenue": false,
+          "maximum_month_and_revenue": false,
+          "minimum_month_and_revenue": false,
+          "maximum_interpretation": false,
+          "minimum_interpretation": false
+        },
+        "monthly_answer_facts_pass": false,
+        "functional_pass": false,
+        "pass": false
+      }
+    },
+    {
+      "test": "hybrid",
+      "reason": "API contract or evidence assertion failed",
+      "details": {
+        "name": "hybrid",
+        "question": "According to the refund policy, how many customers are in the database?",
+        "expected_route": "hybrid",
+        "http_status": 500,
+        "client_latency_seconds": 0.2213,
+        "actual_route": null,
+        "route_pass": false,
+        "required_modules": [
+          "database",
+          "document"
+        ],
+        "executed_modules": [],
+        "modules_pass": false,
+        "evidence_sources": [],
+        "evidence_pass": false,
+        "answer": "",
+        "answer_fact_checks": {
+          "30": false
+        },
+        "answer_facts_pass": false,
+        "verification": null,
+        "verification_status": "missing",
+        "semantic_factual_verification": "not_performed",
+        "verifier_unit_test_status": "reported_separately",
+        "module_errors": [],
+        "unsupported_fact_check": "missing",
+        "monthly_data_checks": {},
+        "monthly_answer_checks": {},
+        "monthly_answer_facts_pass": true,
+        "functional_pass": false,
+        "pass": false
+      }
+    },
+    {
+      "test": "full-hybrid",
+      "reason": "API contract or evidence assertion failed",
+      "details": {
+        "name": "full-hybrid",
+        "question": "According to the refund policy, what is the return window, how many customers are in the database, and what is the monthly sales trend?",
+        "expected_route": "full_hybrid",
+        "http_status": 500,
+        "client_latency_seconds": 0.2845,
+        "actual_route": null,
+        "route_pass": false,
+        "required_modules": [
+          "analytics",
+          "database",
+          "document"
+        ],
+        "executed_modules": [],
+        "modules_pass": false,
+        "evidence_sources": [],
+        "evidence_pass": false,
+        "answer": "",
+        "answer_fact_checks": {
+          "15 calendar days": false,
+          "30": false,
+          "revenue": false
+        },
+        "answer_facts_pass": false,
+        "verification": null,
+        "verification_status": "missing",
+        "semantic_factual_verification": "not_performed",
+        "verifier_unit_test_status": "reported_separately",
+        "module_errors": [],
+        "unsupported_fact_check": "missing",
+        "monthly_data_checks": {
+          "all_figures_match_postgresql": false,
+          "expected_maximum": {
+            "month": "2026-05",
+            "revenue": 1569800.0
+          },
+          "expected_minimum": {
+            "month": "2026-04",
+            "revenue": 546000.0
+          }
+        },
+        "monthly_answer_checks": {
+          "2026-01_revenue": false,
+          "2026-02_revenue": false,
+          "2026-03_revenue": false,
+          "2026-04_revenue": false,
+          "2026-05_revenue": false,
+          "2026-06_revenue": false,
+          "2026-07_revenue": false,
+          "2026-08_revenue": false,
+          "2026-09_revenue": false,
+          "2026-10_revenue": false,
+          "maximum_month_and_revenue": false,
+          "minimum_month_and_revenue": false,
+          "maximum_interpretation": false,
+          "minimum_interpretation": false
+        },
+        "monthly_answer_facts_pass": false,
+        "functional_pass": false,
+        "pass": false
+      }
+    }
+  ]
+}

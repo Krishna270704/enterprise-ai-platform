@@ -1,0 +1,12 @@
+{
+  "failed_tests": [],
+  "limitations": [
+    "Numeric verification checks whether answer numbers occur anywhere in serialized evidence.",
+    "Document verification uses lexical overlap, not semantic entailment.",
+    "A supported number does not prove that the surrounding sentence is truthful.",
+    "Mixed document/database/analytics answers may be marked review_required for human review.",
+    "These cases test verifier behavior and are not semantic faithfulness or hallucination detection.",
+    "Browser checks were executed separately with Playwright and are not part of this CLI runner.",
+    "Latency includes live model/database service behavior and is not a controlled benchmark."
+  ]
+}

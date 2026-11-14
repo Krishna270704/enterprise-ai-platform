@@ -1,0 +1,1 @@
+Create a labelled test set with expected route, relevant document IDs, expected SQL results and answer facts. Log actual outputs and compute synopsis metrics from reviewed runs. Never fabricate scores.
